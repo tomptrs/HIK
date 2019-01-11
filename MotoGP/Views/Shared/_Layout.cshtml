@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - MotoGP</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+@{
+    var banners = new List<string> { "bannerRaces.jpg", "bannerTeams.jpg", "bannerRiders.jpg", "bannerTickets.jpg" };
+}
+
+<body>
+    <a asp-controller="Home" asp-action="Home"><img src="@Url.Content(String.Format("~/Images/allerlei/{0}", @banners[(int)@ViewData["BannerNr"] - 1]))" /></a>
+
+    @RenderBody()
+</body>
+</html>

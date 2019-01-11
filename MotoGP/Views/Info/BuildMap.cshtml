@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Race>;
+
+@{
+    ViewData["Title"] = "BuildMap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var listOfRaces = @ViewData["ListOfRaces"];
+}
+
+<h1>Races on map</h1>
+
+<img src="~/images/allerlei/map.png" usemap="#racemap" />
+
+<map name="racemap">
+    @*@foreach(var race in ViewData["ListOfRaces"] as IEnumerable<MotoGP.Models.Race>)
+    {
+        <area shape="circle" coords="@Url.Content(String.Format("{0},{1},{2}", race.X, race.Y, 10))" href="@Url.Content(String.Format("/Info/ShowRace/{0}", race.RaceID))" alt="@Url.Content(race.Name)" >
+
+    }*@
+
+    @foreach(var race in Model)
+    {
+        <area shape="circle" coords="@Url.Content(String.Format("{0},{1},{2}", race.X, race.Y, 10))" href="@Url.Content(String.Format("/Info/ShowRace/{0}", race.RaceID))" alt="@Url.Content(race.Name)">
+    }
+</map>

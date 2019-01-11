@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<style>
+    .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+@switch ((int)@ViewData["BannerNr"])
+{
+    case 1:<header><img src="~/images/allerlei/banner1.jpg" /></header> <a asp-controller="Info" asp-action="ListRaces"><img class="centered" src="~/images/allerlei/races.png" /></a>; break;
+    case 2:<header><img src="~/images/allerlei/banner2.jpg" /></header> <a asp-controller="Info" asp-action="ListTeams"><img class="centered" src="~/images/allerlei/teams.png" /></a>; break;
+    case 3:<header><img src="~/images/allerlei/banner3.jpg" /></header> <a asp-controller="Info" asp-action="ListRiders"><img class="centered" src="~/images/allerlei/riders.png" /></a>; break;
+    case 4:<header><img src="~/images/allerlei/banner4.jpg" /></header> <a asp-controller="Shop" asp-action="OrderTicket"><img class="centered" src="~/images/allerlei/tickets.png" /></a>; break;
+}

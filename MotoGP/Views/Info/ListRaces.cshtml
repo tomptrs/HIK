@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Race>;
+
+@{
+    ViewData["Title"] = "ListRaces";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string currentDate = DateTime.Today.ToString("dd/MM/yyyy");
+}
+
+<h2>ListRaces</h2>
+
+<p>Thank you for ordering tickets for the race. Your booking is registered on <strong>@currentDate</strong>. We will send the tickets as soon as possible. </p>
+
+<ol>
+    <li><a asp-controller="Home" asp-action="Index">Back</a></li>
+    <li><a asp-controller="Info" asp-action="BuildMap">Races on map</a></li>
+    <li><a asp-controller="Info" asp-action="SelectRace">One by one</a></li>
+</ol>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>@(Html.DisplayNameFor(model => model.Date))</th>
+        <th>Length</th>
+        <th>Description</th>
+    </tr>
+
+    @foreach (Race race in Model)
+    {
+        <tr>
+            <td>@race.RaceID</td>
+            <td>@race.Name</td>
+            <td>@(Html.DisplayFor(model => race.Date))</td>
+            <td>@race.Length</td>
+            <td>@race.Description</td>
+        </tr>
+    }
+    
+</table>
