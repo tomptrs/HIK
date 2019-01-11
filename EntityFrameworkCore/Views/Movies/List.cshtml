@@ -1,0 +1,47 @@
+﻿@model vmListMovies
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+
+@*<ul>
+        @foreach (Movie m in Model)
+        {
+            <li>@m.Title</li>
+        }
+    </ul>*@
+
+<a asp-controller="Movies" asp-action="Create">Create New</a>
+
+<br />
+
+<form asp-controller="Movies" asp-action="List" method="get">
+    <select asp-for="RatingId" asp-items="Model.Ratings">
+        <option value="0" >-- Select a rating --</option>
+    </select>
+    <input type="submit" value="Filter" />
+</form>
+
+<br />
+
+<table>
+    <tr>
+        <th>Titel</th>
+        <th>Prijs</th>
+    </tr>
+
+    <
+
+    @foreach (Movie m in Model.Movies)
+    {
+        <tr>
+            <td>
+                <a asp-controller="Movies" asp-action="Detail" asp-route-pId="@m.MovieID">@m.Title</a>
+            </td>
+
+            <td>@m.Price</td>
+        </tr>
+
+    }
+</table>

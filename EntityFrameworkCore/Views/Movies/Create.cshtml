@@ -1,0 +1,41 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Create";
+    var ratings = (IEnumerable<SelectListItem>)ViewData["Ratings"];
+}
+
+<h2>MVC Movie - Create</h2>
+
+<form method="post" asp-action="Create">
+    <input type="hidden" name="MovieId" value="@Model.MovieID" />
+
+    <label for="Title">Title:</label><br />
+    <!-- Attribute name="Title" moet overeen komen met de property 'Title' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="text" id="Title" name="Title" value="@Model.Title" />
+
+    <br />
+
+    <label for="Genre">Genre:</label> <br />
+    <!-- Attribute name="Genre" moet overeen komen met de property 'Genre' in Rating object en dan gebeurd de databinding vanzelf -->
+    <select id="Genre" name="Genre" asp-items="ratings" ></select>
+
+    <br />
+
+    <label for="Price">Price:</label><br />
+    <!-- Attribute name="Price" moet overeen komen met de property 'Price' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="number" id="Price" name="Price" value="@Model.Price" />
+
+    <br />
+
+    <label for="ReleaseDate">ReleaseDate:</label><br />
+    <!-- Attribute name="ReleaseDate" moet overeen komen met de property 'ReleaseDate' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="date" id="ReleaseDate" name="ReleaseDate" value="@Model.ReleaseDate" />
+
+    <br />
+
+    <label for="RatingID">Rating:</label><br />
+    <!-- Attribute name="RatingID" moet overeen komen met de property 'RatingID' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="number" id="RatingID" name="RatingID" value="@Model.RatingID" />
+    <br /><br />
+    <input type="submit" value="Save" />
+</form>

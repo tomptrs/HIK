@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Rating>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>MVC Movie - All Ratings</h2>
+
+<a asp-controller="Ratings" asp-action="Create" >Create New</a>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+    </tr>
+
+    @foreach (var rating in Model)
+    {
+    <tr>
+        <td>@rating.Code</td>
+        <td>@rating.Name</td>
+        <td><a asp-controller="Ratings" asp-action="Edit" asp-route-pId="@rating.RatingID">Edit</a></td>
+        <td><a asp-controller="Ratings" asp-action="Delete" asp-route-pId="@rating.RatingID">Delete</a></td>
+    </tr>
+
+    }
+</table>

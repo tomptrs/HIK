@@ -1,0 +1,17 @@
+﻿@model Rating
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>MVC Rating - Delete</h2>
+
+<form method="post" asp-action="Delete">
+    <input type="hidden" name="RatingId" value="@Model.RatingID" />
+    <label for="Code">Code:</label> <br />
+    <!-- Attribute name="Code" moet overeen komen met de property 'Code' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="text" id="Code" name="Code" disabled="disabled" value="@Model.Code" /><br />
+    <label for="Name">Name:</label><br />
+    <!-- Attribute name="Name" moet overeen komen met de property 'Name' in Rating object en dan gebeurd de databinding vanzelf -->
+    <input type="text" id="Name" name="Name" disabled="disabled" value="@Model.Name" /><br />
+    <input type="submit" value="Delete" />
+</form>
