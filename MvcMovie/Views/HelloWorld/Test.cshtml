@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test</h2>
+
+<ul>
+    @for(int loop = 0; loop < (int)ViewData["NumTimes"]; loop++)
+    {
+        <li>@ViewData["Message"]</li>
+
+    }
+</ul>
