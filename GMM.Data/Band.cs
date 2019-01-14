@@ -2,6 +2,9 @@
 
 namespace GMM.Data
 {
+    /*
+     * This is a band class
+     */
     public class Band
     {
         public int Id { get; set; }
