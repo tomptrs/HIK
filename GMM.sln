@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMM", "GMM\GMM.csproj", "{AB749023-A93A-4A67-8BC4-05CA792E1724}"
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMM", "GMM\GMM.csproj", "{AB749023-A93A-4A67-8BC4-05CA792E1724}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMM.ViewModel", "GMM.ViewModel\GMM.ViewModel.csproj", "{A2290C22-539D-45C1-B0DA-25BDEE6026F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMM.ViewModel", "GMM.ViewModel\GMM.ViewModel.csproj", "{A2290C22-539D-45C1-B0DA-25BDEE6026F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMM.Data", "GMM.Data\GMM.Data.csproj", "{A97C77A3-F8B9-43E1-8FA8-239303267B4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMM.Data", "GMM.Data\GMM.Data.csproj", "{A97C77A3-F8B9-43E1-8FA8-239303267B4A}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
