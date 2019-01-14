@@ -2,6 +2,9 @@
 
 namespace GMM.Data
 {
+    /*
+    Comment of TOM PEETERS 
+    */
     public class Band
     {
         public int Id { get; set; }
